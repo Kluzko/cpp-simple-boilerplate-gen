@@ -4,10 +4,7 @@
 read -p "Enter a folder/project name: " folder_name
 
 
-if [ ! -d $folder_name ]; then
-  echo "Folder test doesnt exist"
-  exit 1
-fi
+
 
 
 #if folder exist and its empty ask to delete it
@@ -30,7 +27,7 @@ if [ -d "$folder_name" ] && [ "$(ls -A $folder_name)" ]; then
 fi
 
 # check if folder name is valid
-if ! [[ $folder_name =~ ^[a-zA-Z0-9]+$ ]]
+if ! [[ $folder_name =~ ^[a-zA-Z0-9_-]+$ ]]
 then
     echo "Folder name isnt valid"
     exit 1
