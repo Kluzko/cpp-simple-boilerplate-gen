@@ -29,7 +29,7 @@ fi
 # check if folder name is valid
 if ! [[ $folder_name =~ ^[a-zA-Z0-9_-]+$ ]]
 then
-    echo "Folder name isnt valid"
+    echo "Folder name isnt valid."
     exit 1
 fi
 
@@ -37,7 +37,7 @@ fi
 
 # Define folders list
 
-DIRS=('build' 'src' 'includes')
+DIRS=('build' 'src' 'include')
 
 # Make root folder 
 mkdir $folder_name
@@ -69,8 +69,8 @@ set(EXEC main)
 # set the C++11 standard
 set(CMAKE_CXX_STANDARD 11)
 
-# I../includes
-include_directories(includes)
+# I../include
+include_directories(include)
 
 # puts all .cpp files inside src to the SOURCES variable
 file(GLOB SOURCES src/*.cpp)
